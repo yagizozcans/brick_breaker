@@ -6,6 +6,8 @@ public class ball : MonoBehaviour
 {
 
     public GameObject x2Upgrader;
+    public float x2Chance;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "block")
@@ -13,7 +15,10 @@ public class ball : MonoBehaviour
             if(collision.gameObject.GetComponentInChildren<MapBoxIdentifier>().blockType == 0)
             {
                 GameObject.Destroy(collision.gameObject);
-                GameObject upg = Instantiate(x2Upgrader,transform.position,Quaternion.identity);
+                if(x2Chance > Random.Range(0, 100))
+                {
+                    GameObject upg = Instantiate(x2Upgrader, transform.position, Quaternion.identity);
+                }
             }
         }
         if(collision.gameObject.tag == "deathBar")

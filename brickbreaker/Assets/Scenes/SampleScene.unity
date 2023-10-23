@@ -1415,6 +1415,7 @@ MonoBehaviour:
   hardBlockColor: {r: 0.14901961, g: 0, b: 0, a: 1}
   mainMenu: {fileID: 1458018632}
   firstBall: {fileID: 1205484313}
+  bottomline: {fileID: 1583885272}
 --- !u!4 &757636178
 Transform:
   m_ObjectHideFlags: 0
@@ -2327,6 +2328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   x2Upgrader: {fileID: 5225447263652083326, guid: 2e4124d484b383a4986bf72c6d047fc1, type: 3}
+  x2Chance: 10
 --- !u!1 &1219060615
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,7 +2832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6934acf8e7a473248a758004c54d9677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 30
+  movementSpeed: 15
   ballThrowSpeed: 300
   ball: {fileID: 1205484313}
 --- !u!1 &1605927383

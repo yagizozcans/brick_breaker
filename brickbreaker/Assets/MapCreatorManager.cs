@@ -35,6 +35,8 @@ public class MapCreatorManager : MonoBehaviour
     public GameObject mainMenu;
 
     public GameObject firstBall;
+
+    public GameObject bottomline;
     public class ijBox
     {
         int[] iBox;
@@ -148,6 +150,7 @@ public class MapCreatorManager : MonoBehaviour
                 Destroy(box);
             }
         }
+        bottomline.GetComponent<bottomline>().PlayGame();
     }
 
     public void RestartGame()

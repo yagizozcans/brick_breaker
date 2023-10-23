@@ -12,6 +12,7 @@ public class bottomline : MonoBehaviour
 
     public GameObject ball;
 
+
     private void Start()
     {
         screenX = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0)).x;
@@ -33,13 +34,6 @@ public class bottomline : MonoBehaviour
                 transform.position += Vector3.right * (Time.deltaTime * movementSpeed);
             }
         }
-
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            ball.transform.parent = null;
-            ball.transform.Rotate(0.0f, 0.0f, Random.Range(-90.0f, 90.0f));
-            ball.transform.GetComponent<Rigidbody2D>().AddForce(ball.transform.up.normalized * ballThrowSpeed);
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -60,5 +54,12 @@ public class bottomline : MonoBehaviour
             }
             Destroy(collision.gameObject);
         }
+    }
+
+    public void PlayGame()
+    {
+        ball.transform.parent = null;
+        ball.transform.Rotate(0.0f, 0.0f, Random.Range(-45.0f, 45.0f));
+        ball.transform.GetComponent<Rigidbody2D>().AddForce(ball.transform.up.normalized * ballThrowSpeed);
     }
 }
